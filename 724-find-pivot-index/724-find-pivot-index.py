@@ -3,9 +3,6 @@ class Solution:
         
         left_prefix = self.prefix_sum(nums)
         right_prefix = self.reverse(self.prefix_sum(self.reverse(nums))) 
-        
-        print(left_prefix, right_prefix)
-        
         for i in range(len(nums)):
             if (left_prefix[i] == right_prefix[i]):
                 return i
