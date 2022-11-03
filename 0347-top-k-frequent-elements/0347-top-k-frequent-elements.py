@@ -38,8 +38,6 @@ class Solution:
             result.append(heapq.heappop(item_list)[1])
         return result
         
-        
-        
             
     
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
@@ -54,7 +52,7 @@ class Solution:
             # That way it can bubble up, or down based on the min-heap property and we can keep taking it
             # I believe the time complexity for a heap was O(log(n))
             
-            return self.second_solution(nums, k)
+            return self.first_solution(nums, k)
             
     
             
