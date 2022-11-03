@@ -71,7 +71,7 @@ class Solution:
         result = []
         for i in range(len(bucket_size) - 1, 0, -1):
             for value in bucket_size[i]:
-                print(i, value)
+                # print(i, value)
                 result.append(value)
                 if (len(result) == k):
                     return result
