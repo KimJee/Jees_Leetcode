@@ -14,33 +14,30 @@ class Solution:
         return result
     
     def memoization(self, nums:List[int]) -> List[int]:
-        result = []
         
-        prefix_product = []
-        product = 1
-        for i in range(len(nums)):
-            product = product*nums[i]
-            prefix_product.append(product)
+        # Prefix iteration
+        result = [1]*(len(nums)+1)
+        for i in range(1, len(nums) + 1, 1):
+            result[i] = nums[i-1]*result[i-1]
+        print(result)
         
-        postfix_product = []
         product = 1
         for j in range(len(nums)-1, -1, -1):
             product = product*nums[j]
-            postfix_product.insert(0, product)
+            result[j-1] = product*result[j-1]
+        # Postfix iteration
+        # product = 1
+        # for j in range(len(result)-2, -1, -1):
+        #     product = product*nums[j]
+        #     result[j] = result[j]*product
+        return result[:-1]
+            
+    
         
-        #print(prefix_product)
-        #print(postfix_product)
-        
-        result = []
-        result.append(postfix_product[1])
-        for k in range(1, len(nums) -1, 1): 
-            result.append(prefix_product[k-1]*postfix_product[k+1])
-        result.append(prefix_product[len(nums)-1-1])    
-        # print(result)
+    
             
         
-        
-        return result
+        # result
         
         
                 
