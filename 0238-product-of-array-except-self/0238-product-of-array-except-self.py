@@ -28,15 +28,15 @@ class Solution:
             product = product*nums[j]
             postfix_product.insert(0, product)
         
-        print(prefix_product)
-        print(postfix_product)
+        #print(prefix_product)
+        #print(postfix_product)
         
         result = []
         result.append(postfix_product[1])
         for k in range(1, len(nums) -1, 1): 
             result.append(prefix_product[k-1]*postfix_product[k+1])
         result.append(prefix_product[len(nums)-1-1])    
-        print(result)
+        # print(result)
             
         
         
