@@ -3,8 +3,6 @@ class Solution:
         stack = MyStack()
 
         for letter in s:
-            # First check if the stack has anything
-            # print(letter, stack.top(), "Stack:", stack.stack)
             if (letter in ["[", "(", "{"]):
                 stack.push(letter)
             else:
@@ -20,13 +18,6 @@ class Solution:
             return False
         return True
 
-
-                
-    
-
-                
-        
-        
 class MyStack:
         def __init__(self):
             self.stack = []
