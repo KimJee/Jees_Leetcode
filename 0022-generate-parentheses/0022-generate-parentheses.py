@@ -1,24 +1,3 @@
-"""
-
-    Input: n = 1
-    Output: ["()"]
-    
-    Input: n = 2
-    Output: (()) ()()
-
-    n = 3
-    Output: ["((()))","(()())","(())()","()(())","()()()"]
-
-    n = 3
-
-             ( 
-        (          )
-     (      )           (
-    )    (           (     )
-  )    )           )           (
-)    )           )                )
-"""
-
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
         
