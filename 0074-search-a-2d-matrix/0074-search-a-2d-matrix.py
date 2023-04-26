@@ -11,7 +11,6 @@ class Solution:
                 bot = middle + 1
             else:
                 break
-        print(bot, top)
         if (bot > top):
             return False
         
